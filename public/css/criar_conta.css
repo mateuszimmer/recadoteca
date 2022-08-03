@@ -1,0 +1,134 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@100&family=Titan+One&display=swap');
+
+body {
+    background-image: linear-gradient(90deg, #ffafcc, #a2d2ff);
+    margin: 0;
+    padding: 0;
+    color: #555;
+    position: relative;
+}
+
+main .logo a{
+    text-decoration: none;
+    color: #555;
+    /* font-weight: 500; */
+}
+
+main {
+    width: 80%;
+    min-width: 900px;
+    height: 95vh;
+    position: relative;
+    top: 50vh;
+    left: 50%;
+    transform: translate(-50%, -50%) ;
+    background: #FFF;
+    /* margin: 50% auto 0 auto; */
+    border-radius: 15px;
+    box-shadow: 0px 4px 8px 0 rgba(0, 0, 0, 0.2);
+    background: linear-gradient(90deg, #FFF, #fff);
+}
+
+.logo .center{
+    text-align: center;
+    /* background-color: blue; */
+    width:90%;
+    display: inline-block;
+    top: 50%;
+    transform:translateY(-50%);
+    position: relative;
+}
+
+main div.logo {
+    width: 60%;
+    height: 100%;
+    /* background-color: #7d5f8e; */
+    position:absolute;
+    left: 0;
+    border-radius: 15px 0 0 15px;
+    text-align: center;
+}
+
+main div.logo img{
+    top: 30px;
+    height: 240px;
+    display: inline-block;
+}
+
+ main div.logo h1{
+     text-transform: uppercase;
+     font-family: 'Titan One', cursive;
+     font-size: 55px;
+     margin: 10px auto 0;
+     position: relative;
+     left: 50%;
+     transform: translateX(-50%);
+}
+main div.logo h1 span{
+    color: #7d5f8e;
+}
+
+/* ============================================================ */
+
+main div.dados {
+    width: 40%;
+    height: 100%;
+    /* background: #86ea6a; */
+    position: absolute;
+    right: 0;
+    border-radius: 0 15px 15px 0;
+}
+
+.dados .center{
+    text-align: center;
+    background-color: #fdfdfd;
+    width:90%;
+    /* height: 80%; */
+    display: inline-block;
+    top: 50%;
+    transform:translateY(-50%);
+    position: relative;
+    border-radius: 20px;
+    box-shadow: 0px 0px 4px 1px rgba(0, 0, 0, 0.3);
+    padding: 100px 0;
+}
+
+main div.dados h2{
+    font-family: Arial, Helvetica, sans-serif;
+    text-transform: uppercase;
+    margin-bottom: 40px;
+}
+
+main div.dados form input{
+    display: inline-block;
+    width: 70%;
+    padding: 8px;
+    border: 0;
+    box-shadow: 0px 0px 4px 1px rgba(0, 0, 0, 0.3);
+    border-radius: 6px;
+    margin-bottom: 8px;
+}
+
+main div.dados form input#botao_cadastrar, main div.dados form input#botao_voltar {
+    width: 130px;
+    margin: 30px auto 0;
+    text-transform: uppercase;
+    font-weight: 600;
+    color:#fff;
+    background-color: rgb(85, 216, 98);
+    box-shadow: 2px 2px 4px 0 rgba(0, 0, 0, 0.2);
+    box-shadow: inset -1px -9px 10px 1px rgba(0, 0, 0, 0.2);
+}
+
+main div.dados form input#botao_voltar {
+    background-color: #aaa;
+}
+
+main div.dados form input#botao_cadastrar:hover, main div.dados form input#botao_voltar:hover{
+    cursor: pointer;
+}
+
+main div.dados form input#botao_cadastrar:active, main div.dados form input#botao_voltar:active {
+    box-shadow: 2px 2px 4px 0 rgba(0, 0, 0, 0.2);    
+    box-shadow: inset 2px 3px 7px 1px rgba(0, 0, 0, 0.2);
+}
