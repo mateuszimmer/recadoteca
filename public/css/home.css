@@ -1,0 +1,196 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@100&family=Titan+One&display=swap');
+
+body {
+    background-image: linear-gradient(90deg, #ffafcc, #a2d2ff);
+    margin: 0;
+    padding: 0;
+    color: #555;
+    padding-top: 80px;
+    font-family: sans-serif;
+    font-size: 12px;
+}
+
+/*================ HEADER ================*/
+
+header {
+    background-color: #fff;
+    width: 100%;
+    height: 70px;
+    position: fixed;
+    top: 0;
+    left: 0;
+    box-shadow: 1px 0 4px #555;
+}
+
+div.nome-pagina {
+    padding: 10px;
+    width: 50%;
+}
+
+div.nome-pagina a{
+    text-decoration: none;
+    color: #555;
+}
+
+div.nome-pagina img {
+    width: 50px;
+    top: 50%;
+    left: 40px;
+    transform: translateY(-50%);
+    display: inline-block;
+    position: absolute;
+}
+
+div.nome-pagina h1 {
+    display: inline-block;
+    position: absolute;
+    top: 50%;
+    left: 95px;
+    transform: translateY(-50%);
+    text-transform: uppercase;
+    font-family: 'Titan One', cursive;
+    font-size: 32px;
+}
+
+div.nome-pagina h1>span {
+    color: #7d5f8e;
+}
+
+.cabecalho-menu {
+    position: absolute;
+    width: 50%;
+    height: 100%;
+    right: 0;
+    top:0;
+}
+
+.cabecalho-menu>img {
+    width: 32px;
+    position: absolute;
+    right: 50px;
+    top:50%;
+    transform: translateY(-50%);
+}
+
+.cabecalho-menu>img:hover {
+    cursor: pointer;
+}
+
+/*====================== MAIN ========================*/
+
+main {
+    background-color: #fff;
+    margin: auto;
+    width: 80%;
+    min-width: 900px;
+    min-height: calc(95vh - 70px);
+    border-radius: 10px;
+    box-shadow: 0 4px 8px #555;
+    padding: 35px 20px;
+    box-sizing: border-box;
+}
+
+.titulo{
+    text-align: center;
+    padding: 10px 0 20px;
+}
+
+h2{
+    font-family: sans-serif;
+    text-transform: uppercase;
+    font-weight: 700;
+}
+
+.entrada-dados{
+    padding: 10px 0 20px;
+    text-align:center;
+}
+
+#formulario-cadastrar-recados input{
+    border-radius: 5px;
+    padding: 8px 15px;
+    box-shadow: 1px 1px 4px #555;
+}
+
+#input-descricao{
+    width:30%;
+}
+
+#input-detalhamento{
+    width: 50%;
+}
+
+#botao-cadastrar{
+    padding: 8px 15px;
+    background-color: #009900;
+    color:#fff;
+}
+
+#botao-cadastrar:hover{
+    cursor: pointer;
+}
+
+/*====================== TABELA ========================*/
+
+div.informacoes{
+    text-align: center;
+}
+
+div.informacoes table{
+    display: inline-block;
+    width: 95%;
+    border-collapse: collapse;
+    position: relative;
+    border-radius: 10px;
+    box-shadow: 1px 1px 4px #555; 
+}
+
+
+div.informacoes th{
+    height: 40px;
+    border-bottom: 1px solid #999;
+}
+
+div.informacoes tr{
+    height: 40px;
+}
+
+div.informacoes td{
+    border-top: 1px solid #999;
+}
+
+.col1 {
+    width: 100px;
+}
+
+.col2, .col4 {
+    width: 300px;
+}
+
+.col3 {
+    width: 500px;
+}
+
+.editar, .excluir{
+    padding: 5px 15px;
+    background-color: #009900;
+    color: #fff;
+    border-radius: 5px;
+}
+
+.excluir{
+    background-color: red;
+}
+
+
+
+
+/* div.informacoes th, div.informacoes td{
+    position:relative;
+    width: 50%;
+} */
+
+
+
+
+

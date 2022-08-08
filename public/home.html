@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./css/reset.css">
+    <link rel="stylesheet" href="./css/home.css">
+    <link rel="shortcut icon" href="favicon.ico" type="image/x-icon">
+    <title>Página de Recados</title>
+</head>
+<body>
+    <header>
+        <div class="nome-pagina">
+            <a href="#">
+                <img src="./images/icone.png" alt="logo">
+                <h1>Recado<span>teca</span></h1>
+            </a>
+        </div>
+        <div class="cabecalho-menu">
+            <img src="./images/menu-suspenso.png" alt="Menu">
+        </div>
+    </header>
+    <main>
+        <div class="titulo">
+            <h2>Meus recados</h2>
+        </div>
+        <div class="entrada-dados">
+            <form id="formulario-cadastrar-recados" action="cadastrarRecado">
+                <input type="text" name="descricao" id="input-descricao" placeholder="Descrição">
+                <input type="text" name="detalhamento" id="input-detalhamento" placeholder="Detalhamento">
+                <input id="botao-cadastrar" type="button" value="Cadastrar">
+            </form>
+        </div>
+        <div class="informacoes">
+            <table>
+                <thead>
+                    <tr>
+                        <th class="col1">#</th>
+                        <th class="col2">Descrição</th>
+                        <th class="col3">Detalhamento</th>
+                        <th class="col4">Ação</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>1</td>
+                        <td>Compras</td>
+                        <td>Comprar Pão</td>
+                        <td>
+                            <button class="editar">Editar</button>
+                            <button class="excluir">Excluir</button>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>2</td>
+                        <td>Estudos</td>
+                        <td>Estudar JavaScript</td>
+                        <td>
+                            <button class="editar">Editar</button>
+                            <button class="excluir">Excluir</button>
+                        </td>
+                    </tr>
+                </tbody>
+
+
+
+
+            </table>
+        </div>
+    </main>
+</body>
+</html>
