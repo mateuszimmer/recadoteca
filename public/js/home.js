@@ -1,11 +1,16 @@
+const textoEditarHTML = document.querySelector('#texto-editar')
+const botaoCancEditHTML = document.querySelector('#botao-cancelar')
 const botaoCadRecHTML = document.querySelector('#botao-cadastrar')
 const localRecadosHTML = document.querySelector('#recados')
 const botaoSairHTML = document.querySelector('#menu-suspenso')
 const usuarioLogado = JSON.parse(localStorage.getItem(localStorage.getItem('usuarioLogado')))
+const inputNumeroHTML = document.querySelector('#numero_recado')
+const inputDescricaoHTML = document.querySelector('#input-descricao')
+const inputDetalhamentoHTML = document.querySelector('#input-detalhamento')
 
 document.addEventListener('DOMContentLoaded', (()=>{
     if(!usuarioLogado){
-        location.assign('xindex.html')
+        location.assign('index.html')
         return
     } 
     console.log(usuarioLogado)
@@ -15,14 +20,20 @@ document.addEventListener('DOMContentLoaded', (()=>{
 }))
 
 botaoCadRecHTML.addEventListener('click', criarRecado)
+botaoCancEditHTML.addEventListener('click', cancelaEdicao)
 botaoSairHTML.addEventListener('click', sairSistema)
 
 function criarRecado(){
     const usuarioLogado = JSON.parse(localStorage.getItem(localStorage.getItem('usuarioLogado')))
-    const numeroRecado = document.querySelector('#numero_recado').value
-    const descricao = document.querySelector('#input-descricao').value
-    const detalhamento = document.querySelector('#input-detalhamento').value
+    const numeroRecado = inputNumeroHTML.value
+    const descricao = inputDescricaoHTML.value
+    const detalhamento = inputDetalhamentoHTML.value
     
+    if(!descricao || !detalhamento){
+        alert('A descrição e o detalhamento devem ser preenchidos')
+        return
+    }
+
     recadoNovo = {
         descricao,
         detalhamento
@@ -35,21 +46,37 @@ function criarRecado(){
     }
 
     console.log(usuarioLogado)
-    
+
     salvarNoLocalStorage(usuarioLogado)
     
     limparDados()
     
     mostrarRecados(usuarioLogado)
+
+    cancelaEdicao()
 }
 
 function editarRecado(id, usuario){
     const usuarioDoRecado = JSON.parse(localStorage.getItem(usuario))
     const recadoParaEditar = usuarioDoRecado.recados[id]
 
-    document.querySelector('#numero_recado').value = id
-    document.querySelector('#input-descricao').value = recadoParaEditar.descricao
-    document.querySelector('#input-detalhamento').value = recadoParaEditar.detalhamento
+    textoEditarHTML.innerText = `Editar recado ${id+1}`
+    inputDetalhamentoHTML.style = 'width: 40%'
+    botaoCancEditHTML.style = 'display: inline-block'
+
+    inputNumeroHTML.value = id
+    inputDescricaoHTML.value = recadoParaEditar.descricao
+    inputDetalhamentoHTML.value = recadoParaEditar.detalhamento
+}
+
+function cancelaEdicao(){
+    inputDetalhamentoHTML.style = ''
+    inputDetalhamentoHTML.value = ''
+
+    inputDescricaoHTML.value = ''
+    botaoCancEditHTML.style = ''
+    inputNumeroHTML.value = ''
+    textoEditarHTML.innerText = `CADASTRAR NOVO RECADO`
 }
 
 function excluirRecado(id, usuario){
@@ -67,9 +94,9 @@ function salvarNoLocalStorage(info){
 }
 
 function limparDados(){
-    document.querySelector('#numero_recado').value = ''
-    document.querySelector('#input-descricao').value = ''
-    document.querySelector('#input-detalhamento').value = ''
+    inputNumeroHTML.value = ''
+    inputDescricaoHTML.value = ''
+    inputDetalhamentoHTML.value = ''
 }
 
 function mostrarRecados(usuario){
@@ -120,10 +147,6 @@ function mostrarRecados(usuario){
         
         btn.push(novaLinha)
     })
-    
-}
-
-function verificaLogado(usuario){
     
 }
 

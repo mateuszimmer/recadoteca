@@ -87,7 +87,7 @@ div.nome-pagina h1>span {
     transform: translateY(-100px);
     box-shadow: 1px 1px 4px #555;
     opacity: 1;
-    transition: 0.5s ease-in-out;
+    transition: 0.35s ease-in-out;
 }
 
 #menu-suspenso li {
@@ -105,7 +105,7 @@ div.nome-pagina h1>span {
 .cabecalho-menu > img:hover ~ #menu-suspenso, #menu-suspenso:hover{
     transform: translateY(0px);
     opacity: 1;
-    transition: 0.5s ease-in-out;
+    transition: 0.35s ease-in-out;
 } 
 
 /*====================== MAIN ========================*/
@@ -138,6 +138,13 @@ h2{
     text-align:center;
 }
 
+#texto-editar{
+    padding: 0 30px 10px;
+    text-align: left;
+    text-transform: uppercase;
+    font-weight: 600;
+}
+
 #formulario-cadastrar-recados input{
     border-radius: 7px;
     padding: 8px 15px;
@@ -158,9 +165,18 @@ h2{
 }
 
 #botao-cadastrar{
-    padding: 8px 15px;
+    padding: 8px;
+    width: 90px;
     background-color: #009900;
     color:#fff;
+}
+
+#botao-cancelar{
+    padding: 8px;
+    width: 90px;
+    background-color: red;
+    color: #fff;
+    display: none;
 }
 
 #botao-cadastrar:hover{
